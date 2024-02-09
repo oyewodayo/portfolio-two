@@ -192,7 +192,7 @@ const TextLoop = styled.div`
   align-items: center;
   justify-content: end;
   justify-self: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 85%;
   gap: 12px;
   line-height: 100px;

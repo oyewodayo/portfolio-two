@@ -1,22 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Document = styled.img`
-    display: none;
-    height: 70px;
-    width: fit-content;
-    background-color: #000;
-    border-radius: 10px;
-
-    &:hover{
-        cursor: pointer;
-        opacity: 0.8;
-    }
-`;
 
 const Card = styled.div`
-    width:650px;
+    width:550px;
     border-radius: 10px;
+    background-color: #ffffff;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     padding: 12px 16px;
     justify-content: space-between;
@@ -32,9 +21,6 @@ const Card = styled.div`
         transform: translateY(-5px);
     }
 
-    &:hover ${Document}{
-        display: flex;
-    }
 
     @media screen and (max-width: 768px) {
         padding: 10px;
@@ -156,10 +142,7 @@ const ExperienceCard = ({experience}) => {
             </>
             )}
         </Description>
-        {experience.doc && (
-        <a href={experience.doc} target="new">
-            <Document src={experience.doc}></Document>
-        </a>)}
+       
     </Card>
   )
 }

@@ -3,10 +3,15 @@ import styled, {ThemeProvider} from 'styled-components';
 import {darkTheme, lightTheme} from "./utils/Themes";
 import Navbar from './components/Navbar';
 import Hero from './components/Herosection';
-import Skills from './components/About';
 import Education from './Education';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Experience from './components/Experience';
+import About from './components/About';
+import Events from './components/Events';
+import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Webinar from './components/Webinar';
+import Insight from './components/Insights';
 
 const Body = styled.div`
 background-color:#eeeef2;
@@ -17,7 +22,7 @@ overflow-x:hidden
 
 
 const Wrapper = styled.div`
-background: linear-gradient(
+/* background: linear-gradient(
   38.73deg,
   rgba(204,0,187,0.15) 0%,
   rgba(201,32,184,0) 50%
@@ -26,9 +31,8 @@ background: linear-gradient(
   141.27deg,
   rgba(0,70,209,0) 50%,
   rgba(0,70,209,0.15) 100%
-  );
+  ); */
 width: 100%;
-clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 function App() {
   return (
@@ -38,9 +42,11 @@ function App() {
         <Body>
           <Hero/>
           <Wrapper>        
-          <Skills/>
-          <Experience/>
-          <Education/>
+          <About/>
+          <Events/>
+          <Insight/>
+          <Webinar/>
+          <Footer/>
           </Wrapper>
         </Body>
       </Router>
